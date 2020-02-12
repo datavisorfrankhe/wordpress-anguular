@@ -1,0 +1,13 @@
+<ul *ngIf="nodes.length>0">
+    <li *ngFor="let node of nodes">
+        <div class="link">
+            <div class="content" routerLink="/{{node.slug}}">
+                <h3>{{node.title}}</h3>
+                <p>
+                    Written by {{node.author.name}} on {{node.date}}
+                </p>
+                <div [innerHTML]="node.excerpt"></div>
+            </div>
+        </div>
+    </li>
+</ul>
